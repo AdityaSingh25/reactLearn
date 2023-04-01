@@ -2,11 +2,11 @@ import { useState } from "react";
 
 import Icon from "./components/icon";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";//done
+import "react-toastify/dist/ReactToastify.css";//done
 
-import { Card, CardBody, Container, Button, Col, Row } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.css";
+import { Card, CardBody, Container, Button, Col, Row } from "reactstrap";//done
+import "bootstrap/dist/css/bootstrap.css";//done
 import "./App.css";
 
 const itemArray = new Array(9).fill("empty");
@@ -56,7 +56,7 @@ const App = () => {
             </div>
           ) : (
             <h1 className="text-center text-warning">
-              {isCross ? "Cross" : "Circle"} turns
+              {isCross ? "Cross" : "Circle"} Turns
             </h1>
           )}
           <div className="grid">
