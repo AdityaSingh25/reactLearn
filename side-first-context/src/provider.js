@@ -8,22 +8,29 @@ import React, { useState } from "react";
 
 import PackageContext from "./context";
 //PackageProvider == superman
-//now creating a provider
 
-const provider = (props) => {
+//now creating a provider
+const Provider = (props) => {
+  //what information you are gonna provide
+  // goes in this
+  //**
   const [mission, setMission] = useState({
     mname: "Go to russia",
-    agent: 007,
+    agent: "007",
     accept: "Not accepted",
   });
-  //return part is actually important in provider and it depends on the context that you are throwing up in line no. 9
 
+  //return part is actually important in provider and it depends on the context that you are throwing up in line no. 9
   return (
-    <PackageContext.Provider
+    <PackageContext.Provider // making a provider and packageContext act as a wrapper just as div
+      // and provider k saath value aata hai
+
+      //now we want this information (**) accessed by any one who is using our provider
+      //we provide information by this value which takes two curly braces
       value={{
-        data: mission,
+        data: mission, //we passed all the information & not only mission we can pass some custiom methods as well   DATA IS ACCESSING THE ENTIRE MISSION OBJECT
         isMissionAccepted: () => {
-          setMission({ ...mission, accept: "ACCEPTED" });
+          setMission({ ...mission, accept: "ACCEPTED" }); // ...mission means load all the values which are in mission object and change accept value to "ACCEPTED"
         },
         //...mission means load all values from mission object and only change one value in it that is accept
       }}
@@ -33,3 +40,4 @@ const provider = (props) => {
   );
 };
 //now we have to use this provider
+export default Provider;
