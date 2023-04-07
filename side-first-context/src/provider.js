@@ -28,7 +28,7 @@ const Provider = (props) => {
       //now we want this information (**) accessed by any one who is using our provider
       //we provide information by this value which takes two curly braces
       value={{
-        data: mission, //we passed all the information & not only mission we can pass some custiom methods as well   DATA IS ACCESSING THE ENTIRE MISSION OBJECT
+        data: mission, //we passed all the information & not only mission we can pass some custom methods as well   DATA IS ACCESSING THE ENTIRE MISSION OBJECT
         isMissionAccepted: () => {
           setMission({ ...mission, accept: "ACCEPTED" }); // ...mission means load all the values which are in mission object and change accept value to "ACCEPTED"
         },
